@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Checkers</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>AI Checkers</h1>
+      <p class="subtitle">Red vs Black — powered by GPT</p>
+    </header>
+
+    <main>
+      <section class="board-panel">
+        <div class="status-bar">
+          <div class="turn-indicator">
+            <span class="label">Turn</span>
+            <span id="turn-badge" class="badge">—</span>
+          </div>
+          <div class="counts">
+            <span id="red-count" class="count red">Red: 12</span>
+            <span id="black-count" class="count black">Black: 12</span>
+            <span id="move-count" class="count">Move #0</span>
+          </div>
+        </div>
+
+        <div id="board" class="board" aria-label="Checkers board"></div>
+
+        <div id="status-message" class="status-message">Press Start to begin</div>
+
+        <div class="controls">
+          <button id="btn-start" class="btn primary">Start Game</button>
+          <button id="btn-step" class="btn" disabled>Next Move</button>
+          <button id="btn-auto" class="btn" disabled>Auto Play</button>
+          <button id="btn-reset" class="btn ghost">Reset</button>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <h2>Move History</h2>
+        <ol id="move-history" class="move-history"></ol>
+      </aside>
+    </main>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
